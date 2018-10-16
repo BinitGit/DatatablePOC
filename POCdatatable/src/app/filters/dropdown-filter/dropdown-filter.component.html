@@ -1,0 +1,11 @@
+<div>
+  <span>Filter {{prop}}:</span>
+  <br>
+  <select [(ngModel)]="selectedValue">
+    <option [ngValue]="null">{{title}}</option>
+    <option *ngFor="let option of options" 
+            [ngValue]="option.key">{{option.key}}
+    </option>
+  </select>
+  <button (click)="emitSelected()">Apply filter</button>
+</div>

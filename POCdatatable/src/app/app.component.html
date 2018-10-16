@@ -1,0 +1,58 @@
+<div>
+
+  <ngx-datatable class="bootstrap"
+    [rows]="rows"
+    [columns]="filteredColumns"
+    [columnMode]="'force'"
+    [externalSorting]="true"
+    (sort)="onSort($event)"
+    [headerHeight]="50"
+    [rowHeight]="'auto'">
+    <!-- 
+    [externalPaging]="true"
+    [count]="page.totalElements"
+    [offset]="page.pageNumber"
+    [limit]="page.size"
+    (page)='setPage($event)'
+    [loadingIndicator]="loading" -->
+
+    <!-- <ngx-datatable-column
+      *ngFor="let col of filteredColumns"
+      [name]="col.prop">
+    </ngx-datatable-column> -->
+  </ngx-datatable>
+
+  <input type='checkbox' [(ngModel)]="displayPopover" name="displayCheckbox"/>
+
+  <div *ngIf="displayPopover">
+    <h4>Display columns</h4>
+    <ul>
+      <li *ngFor='let col of settings.columns'>
+        <input
+          type='checkbox'
+          [id]="col.prop"
+          (click)='toggle(col)'
+          [checked]='isChecked(col)'
+        />
+        <label [attr.for]="col.prop">{{col.prop}}</label>
+      </li>
+    </ul>
+
+    <div *ngFor="let filter of settings.filters">
+      <div [ngSwitch]="filter.type">
+          <app-text-input-filter *ngSwitchCase="filterTypes.text"
+                                 [title]="filter.title"
+                                 [prop]="filter.prop"
+                                 (inputChange)="updateFilter($event)">
+          </app-text-input-filter>
+          <app-dropdown-filter *ngSwitchCase="filterTypes.dropdown"
+                               [title]="filter.title"
+                               [prop]="filter.prop"
+                               [options]="filter.fparams"
+                               (selectedChange)="updateFilter($event)">
+          </app-dropdown-filter>
+      </div>
+    </div>
+  </div>
+
+</div>

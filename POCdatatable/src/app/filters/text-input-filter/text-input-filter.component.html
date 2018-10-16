@@ -1,0 +1,9 @@
+<div>
+  <span>Filter {{prop}}:</span>
+  <br>
+  <input type="text" 
+         name="inputTextName" 
+         [(ngModel)]="textInput" 
+         placeholder="{{title}}"/>
+  <button (click)="emitText()">Apply filter</button>
+</div>
