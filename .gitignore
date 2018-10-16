@@ -1,0 +1,15 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/POCdatatableWebAPI/.vs
+/POCdatatableWebAPI/POCdatatableWebAPI/bin/Debug/netcoreapp2.0
+/POCdatatableWebAPI/POCdatatableWebAPI/obj/Debug/netcoreapp2.0
+/POCdatatableWebAPI/POCdatatableWebAPI/obj/project.assets.json
+/POCdatatableWebAPI/POCdatatableWebAPI/obj/POCdatatableWebAPI.csproj.nuget.g.targets
+/POCdatatableWebAPI/POCdatatableWebAPI/obj/POCdatatableWebAPI.csproj.nuget.g.props
+/POCdatatableWebAPI/POCdatatableWebAPI/obj/POCdatatableWebAPI.csproj.nuget.cache
+/POCdatatable/e2e
+/POCdatatable/.vscode
+/POCdatatable/.editorconfig
+/POCdatatable/node_modules
